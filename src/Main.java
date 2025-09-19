@@ -3,6 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
+
         System.out.println("Matrices In Java!!");
 
         int[][] matrices = new int[][]{
@@ -12,5 +13,11 @@ public class Main {
         };
 
 
+        for(int[] matrix : matrices){
+            for(int element : matrix){
+                System.out.print(element + "\t");
+            }
+            System.out.println();
+        }
     }
 }
