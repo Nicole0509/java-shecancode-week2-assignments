@@ -16,10 +16,10 @@ public class Main {
         displayMatrix(matrix1);
         displayMatrix(matrix2);
 
-        int a = matrix1[0][0];
-        int b = matrix1[0][1];
-        int c = matrix1[0][1];
-        int d = matrix1[1][1];
+        int a = matrix1[0][0] * matrix2[0][0] + matrix1[0][1] * matrix2[1][0];
+        int b = matrix1[0][0] * matrix2[0][1] + matrix1[0][0] * matrix2[1][1];
+        int c = matrix1[1][0] * matrix2[0][0] + matrix1[1][1] * matrix2[1][0];
+        int d = matrix1[1][0] * matrix2[0][1] + matrix1[1][1] * matrix2[1][1];
 
         int[][] result = new int[][]{
                 {a,b},
@@ -32,7 +32,6 @@ public class Main {
             }
             System.out.println();
         }
-
     }
 
     public static void main(String[] args) {
