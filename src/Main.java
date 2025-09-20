@@ -12,6 +12,29 @@ public class Main {
         System.out.println();
     }
 
+    public static void multiplyMatrix(int[][] matrix1, int[][] matrix2){
+        displayMatrix(matrix1);
+        displayMatrix(matrix2);
+
+        int a = matrix1[0][0];
+        int b = matrix1[0][1];
+        int c = matrix1[0][1];
+        int d = matrix1[1][1];
+
+        int[][] result = new int[][]{
+                {a,b},
+                {c,d}
+        };
+
+        for (int[] row : result){
+            for(int column : row){
+                System.out.print( column + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void main(String[] args) {
 
 
@@ -19,16 +42,15 @@ public class Main {
 
         int[][] matrix1 = new int[][]{
                 {1,2},
-                {4,5},
+                {3,4},
         };
 
         int[][] matrix2 = new int[][]{
-                {3,6},
-                {7,8},
+                {5,7},
+                {6,8},
         };
 
-        displayMatrix(matrix1);
-        displayMatrix(matrix2);
+        multiplyMatrix(matrix1, matrix2);
 
     }
 }
