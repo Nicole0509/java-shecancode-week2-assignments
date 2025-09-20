@@ -13,8 +13,6 @@ public class Main {
     }
 
     public static void multiplyMatrix(int[][] matrix1, int[][] matrix2){
-        displayMatrix(matrix1);
-        displayMatrix(matrix2);
 
         int a = matrix1[0][0] * matrix2[0][0] + matrix1[0][1] * matrix2[1][0];
         int b = matrix1[0][0] * matrix2[0][1] + matrix1[0][0] * matrix2[1][1];
@@ -26,12 +24,14 @@ public class Main {
                 {c,d}
         };
 
-        for (int[] row : result){
-            for(int column : row){
-                System.out.print( column + "\t");
-            }
-            System.out.println();
-        }
+        //Displaying the working formula
+
+        System.out.println("The formula for multiplying 2D matrices:\n");
+        System.out.println("(" + matrix1[0][0] + " * " + matrix2[0][0] + " + " + matrix1[0][1] + " * " + matrix2[1][0] + ")\t\t("+ matrix1[0][0] + " * " + matrix2[0][1] + " + " + matrix1[0][0] + " * " + matrix2[1][1] + ")");
+        System.out.println("(" + matrix1[1][0] + " * " + matrix2[0][0] + " + " + matrix1[1][1] + " * " + matrix2[1][0] + ")\t\t("+ matrix1[1][0] + " * " + matrix2[0][1] + " + " + matrix1[1][1] + " * " + matrix2[1][1] + ")\n");
+
+        System.out.println("The result:\n");
+        displayMatrix(result);
     }
 
     public static void main(String[] args) {
@@ -48,6 +48,11 @@ public class Main {
                 {5,7},
                 {6,8},
         };
+
+        System.out.println("The first matrix:");
+        displayMatrix(matrix1);
+        System.out.println("The second matrix:");
+        displayMatrix(matrix2);
 
         multiplyMatrix(matrix1, matrix2);
 
