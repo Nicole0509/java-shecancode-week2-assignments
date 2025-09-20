@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -39,14 +41,37 @@ public class Main {
 
         System.out.println("Matrices In Java!!");
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the number of rows and columns of the matrices:\n");
+        System.out.println("Enter the values for matrix 1 in this order");
+        System.out.print("matrix1 [0][0] :");
+        int a = input.nextInt();
+        System.out.print("matrix1 [0][1] :");
+        int b = input.nextInt();
+        System.out.print("matrix1 [1][0] :");
+        int c = input.nextInt();
+        System.out.print("matrix1 [1][1] :");
+        int d = input.nextInt();
+
         int[][] matrix1 = new int[][]{
-                {1,2},
-                {3,4},
+                {a,b},
+                {c,d}
         };
 
+        System.out.println("Enter the values for matrix 2 in this order");
+        System.out.print("matrix2 [0][0] :");
+        a = input.nextInt();
+        System.out.print("matrix2 [0][1] :");
+        b = input.nextInt();
+        System.out.print("matrix2 [1][0] :");
+        c = input.nextInt();
+        System.out.print("matrix2 [1][1] :");
+        d = input.nextInt();
+
         int[][] matrix2 = new int[][]{
-                {5,7},
-                {6,8},
+                {a,b},
+                {c,d}
         };
 
         System.out.println("The first matrix:");
